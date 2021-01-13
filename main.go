@@ -30,10 +30,10 @@ func init() {
 
 func main() {
 	r := mux.NewRouter()
-	r.HandleFunc("/api/v1/movies", movierouter.GetAll).Methods("GET")
-	r.HandleFunc("/api/v1/movies/{id}", movierouter.GetByID).Methods("GET")
-	r.HandleFunc("/api/v1/movies", movierouter.Create).Methods("POST")
-	r.HandleFunc("/api/v1/movies/{id}", movierouter.Delete).Methods("DELETE")
+	r.HandleFunc("/movies", movierouter.GetAll).Methods("GET")
+	r.HandleFunc("/movies/{id}", movierouter.GetByID).Methods("GET")
+	r.HandleFunc("/movies", movierouter.Create).Methods("POST")
+	r.HandleFunc("/movies/{id}", movierouter.Delete).Methods("DELETE")
 
 	var port = ":3000"
 	fmt.Println("Server running in port:", port)
